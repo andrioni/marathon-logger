@@ -1,5 +1,9 @@
-FROM thefactory/python
-MAINTAINER Mike Babineau mike@thefactory.com
+FROM andrioni/base
+
+# Many thanks to Mike Babineau <mike@thefactory.com>
+MAINTAINER Alessandro Andrioni <alessandro.andrioni@dafiti.com.br>
+
+RUN apt-get -y install python=2.7.* python-pip
 
 ADD . /opt/marathon-logger
 RUN pip install -r /opt/marathon-logger/requirements.txt
